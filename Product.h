@@ -6,33 +6,36 @@ using namespace std;
 
 class Product{
 private:
-	string GTIN{""};
-	string Name{""};
-	float Wholesale{0};
-	string Description{""};
+	string GTIN;
+	string Name;
+	float Wholesale;
+	string Description;
 
 
 
 public:
-	//explicit Product(string= " ",string= " ", float=0,string " ");
+    //constructors
+    Product();//default
+	explicit Product(string&,string&,float,string&);
 
-        //setters
-        void setProduct(string, string, float, string);
-        void setGTIN(string);
-        void setName(string);
-        void setWholesale(float);
-        void setDescription(string);
-
-        //getters
-        string getGTIN() const;
-        string getName() const;
-        float getWholesale() const;
-        string getDescription() const;
-
-        //show
-        string showProduct();
-
+    //destructors
+    ~Product();
     
+
+    //setters
+    void setGTIN(string&);
+    void setName(string&);
+    void setWholesale(float);
+    void setDescription(string&);
+
+    //getters
+    string getGTIN() const;
+    string getName() const;
+    float getWholesale() const;
+    string getDescription() const;
+
+    //show
+    string showProduct() const;
 
 };
 
