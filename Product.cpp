@@ -6,12 +6,15 @@
 
 using namespace std;
 
-Product::Product(string& GTIN, string& Name, float Wholesale, string& Description) :
+Product::Product(){}//default con
+
+Product::Product(const string& GTIN,const string& Name, float Wholesale,const string& Description) :
     GTIN{GTIN}, Name{Name}, Wholesale{Wholesale}, Description{Description}
 {
 }
+Product::~Product(){}//destructor
 
-void Product::setGTIN(string& g){
+void Product::setGTIN(const string& g){
     /*if(g.length()!=13){
         throw invalid_argument("Sorry GTINs must be 12 characters long. \
                 Please enter a valid GTIN.");
@@ -22,7 +25,7 @@ void Product::setGTIN(string& g){
     GTIN=g;
 }
 
-void Product::setName(string& n){
+void Product::setName(const string& n){
     Name=n;
 }
 
@@ -31,7 +34,7 @@ void Product::setWholesale(float w){
 }
 
 
-void Product::setDescription(string& d){
+void Product::setDescription(const string& d){
     Description=d;
 }
 
@@ -51,7 +54,7 @@ string Product::getDescription() const{
     return Description;
 }
 
-void Product::showProduct(){
+void Product::showProduct() const{
     cout<<GTIN<<Name<<Wholesale<<Description<<endl;
 }
 

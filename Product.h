@@ -16,17 +16,17 @@ private:
 public:
     //constructors
     Product();//default
-	explicit Product(string&,string&,float,string&);
+	explicit Product(const string&,const string&,float,const string&);
 
     //destructors
     ~Product();
     
 
     //setters
-    void setGTIN(string&);
-    void setName(string&);
+    void setGTIN(const string&);
+    void setName(const string&);
     void setWholesale(float);
-    void setDescription(string&);
+    void setDescription(const string&);
 
     //getters
     string getGTIN() const;
@@ -35,7 +35,7 @@ public:
     string getDescription() const;
 
     //show
-    void showProduct();
+    void showProduct() const;
 
 };
 
