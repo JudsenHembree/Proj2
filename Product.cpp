@@ -1,6 +1,6 @@
 #include <iomanip>
+#include <iostream>
 #include <stdexcept>
-#include <sstream>
 #include <string>
 #include "Product.h"
 
@@ -51,9 +51,7 @@ string Product::getDescription() const{
     return Description;
 }
 
-string Product::showProduct() const{
-    ostringstream output;
-    output<<GTIN<<Name<<Wholesale<<Description<<endl;
-    return output.str();
+void Product::showProduct(){
+    cout<<GTIN<<Name<<Wholesale<<Description<<endl;
 }
 

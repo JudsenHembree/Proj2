@@ -35,7 +35,7 @@ public:
     string getDescription() const;
 
     //show
-    string showProduct() const;
+    void showProduct();
 
 };
 

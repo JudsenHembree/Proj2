@@ -7,8 +7,7 @@ int main() {
 
    Product beans1("222333444555","Beans", 0.79, "Heinz_Baked_Beans");
 	beans1.showProduct();
-
-	Product tuna;
+	/*Product tuna;
 	tuna.setGTIN("123456789123");
 	tuna.setName("Tuna");
 	tuna.setWholesale(0.72);
@@ -42,7 +41,7 @@ int main() {
 		prod.showProduct();
 	}
 
-		
+*/		
 }
 
 
