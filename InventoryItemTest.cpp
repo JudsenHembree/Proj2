@@ -88,16 +88,16 @@ int main() {
 	ifstream inventoryFile("inventory.txt", ios::in);
 	if (!inventoryFile){
 		cerr << "Could not open inventory file" << endl;
-		exit(EXIT_FAILURE);
-	}
-
-	/* 
+		exit(EXIT_FAILURE); }
+/* 
 	 * create an empty InventoryItem
     * fill it with values ready from the file
     * by invoking the InventoryItem member function loadItem
     */
 	InventoryItem * item4Ptr = new InventoryItem();
 	item4Ptr->loadItem(inventoryFile);
+
+    item4Ptr->showItem();
 
 	/*
     * create an empty vector of Inventory Items
@@ -170,6 +170,7 @@ int main() {
     * edit the content of item1
     */
 	item1.edit();
+    item1.showItem();
 
 	/*
     * count up the total items in inventory
@@ -184,36 +185,36 @@ int main() {
 	cout << "for a total inventory of " << num_items
 		  << " items " << endl;
 
-	/*
-    * Open a file and write out all the inventory items
-    */
+/*
+  * Open a file and write out all the inventory items
+  */
 
-	ofstream outfile("inventory2.txt", ios::out);
+ofstream outfile("inventory2.txt", ios::out);
 
-    /* check for success */
-   if(!outfile){
-      cerr << "File could not be opened " << endl;
-      exit(EXIT_FAILURE);
-   }
+  /* check for success */
+ if(!outfile){
+    cerr << "File could not be opened " << endl;
+    exit(EXIT_FAILURE);
+ }
 
-	for (InventoryItem * item: inventoryVector){
-		item->saveItem(outfile);
-	}
+for (InventoryItem * item: inventoryVector){
+	item->saveItem(outfile);
+}
 
-	/* 
-    * from the command line, visually inspect the content of inventory2.txt
-    */
+/* 
+  * from the command line, visually inspect the content of inventory2.txt
+  */
 
 
-	// just to be tidy
-	delete item2Ptr;  
-	delete item3Ptr;
-	delete item4Ptr;
-	delete item5Ptr;
+// just to be tidy
+delete item2Ptr;  
+delete item3Ptr;
+delete item4Ptr;
+delete item5Ptr;
 
-	// should we delete corn and tuna?  If so -- when? where?
+// should we delete corn and tuna?  If so -- when? where?
 
-	return 0;
+return 0;
 		
 }
 

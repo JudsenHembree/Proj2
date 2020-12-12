@@ -1,0 +1,5 @@
+222333444555 "Beans" 0.79 1.23 "beans" 30
+444444555555 "Tuna" 0.88 1.19 "Starkist " 44
+444555666777 "Corn" 0.89 1.12 "WholeKernel_14_oz" 144
+789968000023 "Beans" 1.79 2.75 "Heinz Baked Beans" 40
+111111111111 "jud" 1 2 "bug" 1

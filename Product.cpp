@@ -55,6 +55,6 @@ string Product::getDescription() const{
 }
 
 void Product::showProduct() const{
-    cout<<GTIN<<Name<<Wholesale<<Description<<endl;
+    cout<<GTIN<<" * "<<Name<<" * "<<Wholesale<<" * "<<Description;
 }
 
